@@ -8,7 +8,7 @@ from app.models import User, Consumption
 
 # --------------- Direct router imports -----------------------------
 from app.routes.user_routes import router as user_router
-from app.routes.chatbot import router as chatbot_router
+#from app.routes.chatbot import router as chatbot_router
 from app.routes.prediction_routes import router as prediction_router
 
 app = FastAPI()
@@ -23,7 +23,7 @@ app.add_middleware(
 
 #-------------------------- Include routers -----------------------------
 app.include_router(user_router)
-app.include_router(chatbot_router)
+#app.include_router(chatbot_router)
 app.include_router(prediction_router)
 
 Base.metadata.create_all(bind=engine)
