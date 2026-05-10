@@ -15,7 +15,7 @@ def get_model():
 
     if model is None:
         model = SentenceTransformer(
-            'paraphrase-multilingual-MiniLM-L12-v2'
+            'all-MiniLM-L6-v2'
         )
 
         print("Model Loaded Successfully")
