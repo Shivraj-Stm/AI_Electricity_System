@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+<div class="sidebar">
+
+<h2 class="logo">AI Energy</h2>
+
+<ul class="menu">
+
+<li onclick="navigate('profile.html')">Profile</li>
+<li onclick="navigate('bill.html')">Bill</li>
+<li onclick="navigate('history.html')">History</li>
+<li onclick="navigate('prediction.html')">Prediction</li>
+<li onclick="navigate('chatbot.html')">Chatbot</li>
+<li onclick="logout()" class="logout">Logout</li>
+
+</ul>
+
+</div>
+
+<div class="main-content">
+
+<h1>Dashboard</h1>
+
+<div class="card">
+
+<h3>Monthly Electricity Usage</h3>
+
+<canvas id="usageChart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

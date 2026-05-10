@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Electricity Prediction</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prediction.css">
+
+</head>
+
+<body>
+
+<div class="container">
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <div class="logo">⚡ AI Electricity</div>
+
+  <ul>
+    <li onclick="navigate('profile.html')">Profile</li>
+    <li onclick="navigate('bill.html')">Bill</li>
+    <li onclick="navigate('history.html')">History</li>
+    <li onclick="navigate('prediction.html')">Prediction</li>
+    <li onclick="navigate('chatbot.html')">Chatbot</li>
+
+    <li class="logout" onclick="logout()">Logout</li>
+  </ul>
+
+</div>
+
+
+<div class="main">
+
+<h1 align="center">Electricity Prediction</h1>
+<div class="user-card">
+    <div>
+        <p><strong>Name:</strong> <span id="username"></span></p>
+        <p><strong>Customer ID:</strong> <span id="acct_id"></span></p>
+    </div>
+
+    <div class="status-box">
+        <p>Status</p>
+        <h3 id="status">--</h3>
+    </div>
+</div>
+
+<div class="prediction-card">
+
+<label>Select Months to Predict</label>
+
+<select id="months">
+<option value="1">1 Month</option>
+<option value="3">3 Months</option>
+<option value="4">4 Months</option>
+<option value="5">5 Months</option>
+<option value="6">6 Months</option>
+</select>
+
+<button onclick="predict()">Predict</button>
+
+<table id="resultTable">
+
+<thead>
+
+<tr>
+<th>Month</th>
+<th>Consumption (kWh)</th>
+<th>Bill (₹)</th>
+</tr>
+
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+<script src="js/common.js"></script>
+<script src="js/prediction.js"></script>
+
+</body>
+</html>

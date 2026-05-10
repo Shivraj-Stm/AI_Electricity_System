@@ -1,0 +1,43 @@
+.profile-card{
+display:flex;
+align-items:center;
+background:#b3d6de;
+padding:20px;
+border-radius:10px;
+margin-bottom:25px;
+}
+
+.avatar{
+width:70px;
+height:70px;
+border-radius:50%;
+margin-right:20px;
+}
+
+.profile-info h2{
+margin:0;
+}
+
+.status{
+color:green;
+font-weight:bold;
+}
+
+
+
+.details-card{
+background:#9daf8a;
+padding:25px;
+border-radius:10px;
+}
+
+.details-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:20px;
+}
+
+.details-grid p{
+margin:12px 0;
+}

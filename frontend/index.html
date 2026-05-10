@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Electricity System</title>
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body class="login-body"></body>
+
+<div class="login-card">
+
+<h1>⚡ AI Electricity System</h1>
+<p>Smart Electricity Management Portal</p>
+
+<input type="text" id="identifier" placeholder="Enter Mobile or Meter Number">
+
+<button onclick="sendOTP()">Verify & Continue</button>
+
+<p id="otpStatus"></p>
+
+<div id="otpSection">
+
+<h3>Enter 6-Digit OTP</h3>
+
+<input type="text" id="otp" placeholder="Enter OTP">
+
+<button onclick="verifyOTP()">Verify OTP</button>
+
+</div>
+
+</div>
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

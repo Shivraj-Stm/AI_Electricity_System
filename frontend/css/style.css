@@ -1,0 +1,160 @@
+/* ---------------- LOGIN PAGE ---------------- */
+
+.login-body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial, Helvetica, sans-serif;
+background:url("../img/bg.jpeg") center/cover no-repeat;
+}
+
+.login-card{
+width:420px;
+padding:40px;
+background:rgba(246, 228, 246, 0.9);
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.login-card h1{
+color:#1a73e8;
+margin-bottom:5px;
+}
+
+.login-card p{
+color:#555;
+}
+
+.login-card input{
+width:90%;
+padding:12px;
+margin-top:15px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+.login-card button{
+width:95%;
+padding:12px;
+margin-top:15px;
+background:#749dd2;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+.login-card button:hover{
+background:#5d8ac7;
+}
+
+#otpSection{
+display:none;
+}
+
+#otpStatus{
+margin-top:10px;
+font-weight:500;
+color:#d32f2f;
+}
+
+/* ---------------- DASHBOARD / PROFILE ---------------- */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#eee6ef;
+}
+
+.container{
+display:flex;
+min-height:100vh;
+}
+
+/* ---------------- SIDEBAR ---------------- */
+
+.sidebar{
+width:230px;
+height:100vh;
+background:#456890;
+color:white;
+padding:25px 20px;
+position:fixed;
+left:0;
+top:0;
+box-shadow:2px 0 10px rgba(0,0,0,0.1);
+box-sizing:border-box;
+}
+.logo{
+font-size:22px;
+font-weight:bold;
+margin-bottom:40px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar ul li{
+padding:12px 15px;
+margin-bottom:10px;
+border-radius:6px;
+transition:0.2s;
+}
+
+.sidebar ul li a{
+text-decoration:none;
+color:white;
+display:block;
+font-size:16px;
+}
+
+.sidebar ul li:hover{
+background:#4a74c9;
+}
+
+.sidebar .active{
+background:#4a74c9;
+}
+
+.logout a{
+color:#ff5e5e;
+}
+
+.logout a:hover{
+color:#ff2c2c;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+
+.main{
+margin-left:230px;
+padding:35px;
+width:calc(100% - 230px);
+box-sizing:border-box;
+}
+
+/* ---------------- USER CARD ---------------- */
+
+.user-card{
+display:flex;
+align-items:center;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+margin-bottom:25px;
+}
+
+.avatar{
+width:70px;
+height:70px;
+border-radius:50%;
+margin-right:20px;
+}

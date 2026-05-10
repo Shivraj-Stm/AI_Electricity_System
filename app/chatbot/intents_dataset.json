@@ -1,0 +1,227 @@
+{
+  "intents": [
+
+    {
+      "tag": "bill_query",
+
+      "patterns": [
+        "show my electricity bill",
+        "display bill",
+        "electricity payment details",
+        "show current bill",
+        "current electricity bill",
+        "latest bill",
+        "bill information",
+        "show my current bill",
+
+        "mera bijli bill dikhao",
+        "mera bill dikhao",
+        "mera current bill dikhao",
+
+        "mero bijuli ko bill deau",
+        "mero bill deau",
+        "mero current bill deu",
+        "bijuli bill herna milcha"
+      ],
+
+      "responses": [
+        "Here is your electricity bill."
+      ]
+    },
+
+    {
+      "tag": "bill_history",
+
+      "patterns": [
+        "show bill history",
+        "previous electricity bills",
+        "last month bill",
+        "old bills",
+        "electricity bill history",
+        "show my history of bills",
+        "display electricity bill history",
+        "give my bill records",
+        "previous bill details",
+        "old bill information",
+
+        "mero bijuli bill ko itihas dikhau",
+        "mero viduyt bill ko itihas dekhau",
+
+        "mera bijli bill itihas dikhao",
+        "mera bijuli bill history dehkaoo",
+
+        "hamara bill itihas show karo"
+      ],
+
+      "responses": [
+        "Here is your bill history."
+      ]
+    },
+
+    {
+      "tag": "payment_status",
+
+      "patterns": [
+        "payment status",
+        "check bill payment",
+        "is my bill paid",
+        "pending payment",
+        "payment details",
+        "bill payment status",
+        "payment remaining",
+
+        "mero payment status",
+        "mera payment status dikhao",
+        "bill tiryo ki chaina",
+        "क्या मेरा बिल जमा हुआ"
+      ],
+
+      "responses": [
+        "Here is your payment status."
+      ]
+    },
+
+    {
+      "tag": "savings_tips",
+
+      "patterns": [
+        "how to save electricity",
+        "electricity saving tips",
+        "save power",
+        "reduce electricity usage",
+        "how can I reduce my bill",
+        "tips to save energy",
+
+        "bijuli bachne upaya",
+        "बिजुली बचाउने उपाय",
+
+        "light bill kam kaise kare",
+        "bijli bachane ke tips"
+      ],
+
+      "responses": [
+        "Here are some electricity saving tips."
+      ]
+    },
+
+    {
+      "tag": "high_bill_reason",
+
+      "patterns": [
+        "why is my bill high",
+        "high electricity bill reason",
+        "why electricity bill increased",
+        "why my electricity bill is too much",
+        "bill increase reason",
+        "why current bill is high",
+
+        "bill yati dherai kina ayo",
+        "मेरो बिल धेरै किन आयो",
+
+        "bijli bill jyada kyu aya"
+      ],
+
+      "responses": [
+        "There can be several reasons for a high electricity bill."
+      ]
+    },
+
+    {
+      "tag": "appliance_query",
+
+      "patterns": [
+        "which appliance uses most electricity",
+        "high electricity consuming appliances",
+        "what uses most power",
+        "which devices consume more electricity",
+        "electricity consuming devices",
+
+        "k jun saman le badi bijuli khancha",
+        "कुन उपकरणले बढी बिजुली खान्छ",
+
+        "kaun sa appliance jyada bijli leta hai"
+      ],
+
+      "responses": [
+        "Some appliances consume more electricity than others."
+      ]
+    },
+
+    {
+      "tag": "thanks",
+
+      "patterns": [
+        "thank you",
+        "thanks",
+        "thankyou",
+        "thanks a lot",
+
+        "dhanyabad",
+        "धन्यवाद",
+
+        "shukriya"
+      ],
+
+      "responses": [
+        "You are welcome!"
+      ]
+    },
+
+    {
+      "tag": "bye",
+
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "take care",
+        "bye bye",
+
+        "pheri bhetaula",
+        "फेरी भेटौला",
+
+        "alvida"
+      ],
+
+      "responses": [
+        "Goodbye! Have a great day!"
+      ]
+    },
+
+    {
+      "tag": "greeting",
+
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good evening",
+
+        "namaste",
+        "नमस्ते",
+
+        "namaskar",
+        "sanchai chau",
+        "kaise ho"
+      ],
+
+      "responses": [
+        "Hello! How can I help you today?"
+      ]
+    },
+
+    {
+      "tag": "fallback",
+
+      "patterns": [
+        "unknown"
+      ],
+
+      "responses": [
+        "Sorry, I could not understand your request."
+      ]
+    }
+
+  ]
+}

@@ -1,0 +1,137 @@
+/* MAIN CHAT AREA */
+.main{
+    flex: 1;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+}
+
+/* GREETING */
+.greeting{
+    margin-bottom: 40px;
+    text-align: center;
+
+    transition: all 0.4s ease;   /* ✅ add here */
+}
+
+/* Gemini-style hide animation */
+.hide-greeting{
+    opacity: 0;
+    transform: translateY(-30px);
+    pointer-events: none;
+}
+
+.greeting h2{
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.greeting p{
+    font-size: 20px;
+    color: #555;
+}
+
+
+/* ================= INPUT AREA ================= */
+
+.chat-input{
+    display:flex;
+    align-items:center;
+    width:100%;
+    max-width:650px;
+    background:#ffffff;
+    border-radius:30px;
+    padding:10px 15px;
+    border:1px solid #ddd;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    gap:10px;
+
+    position: sticky;
+    bottom: 20px;
+}
+
+/* INPUT */
+.chat-input input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:16px;
+    background:transparent;
+}
+
+/* BUTTON BASE */
+.chat-input button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* MIC */
+#micBtn{
+    color:#555;
+}
+
+#sendBtn{
+    display:none;  /* ✅ keep this ONLY */
+
+    background:black;
+    color:white;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    font-size:16px;
+
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    position: relative;
+    z-index: 10;
+
+    transition: all 0.2s ease;
+}
+
+#sendBtn:hover{
+    background:#333;
+    transform: scale(1.05);
+}
+/* ================= CHAT MESSAGES ================= */
+
+#chatMessages{
+    width:100%;
+    max-width:650px;
+     flex:1;
+    overflow-y:auto;
+    margin-bottom:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:10px;
+}
+/* USER MESSAGE (RIGHT SIDE) */
+.user-message{
+    align-self:flex-end;
+    background:#4e73df;
+    color:white;
+    padding:10px 15px;
+    border-radius:15px 15px 0 15px;
+    max-width:70%;
+}
+
+/* AI MESSAGE (LEFT SIDE) */
+.ai-message{
+    align-self:flex-start;
+    background:#f1f1f1;
+    padding:10px 15px;
+    border-radius:15px 15px 15px 0;
+    max-width:70%;
+}

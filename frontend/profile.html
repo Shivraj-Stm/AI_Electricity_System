@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AI Electricity System</title>
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/profile.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+<div class="logo">⚡ AI Electricity</div>
+
+<ul>
+
+<li class="active">Profile</li>
+<li onclick="navigate('bill.html')">Bill</li>
+<li onclick="navigate('history.html')">History</li>
+<li onclick="navigate('prediction.html')">Prediction</li>
+<li onclick="navigate('chatbot.html')">Chatbot</li>
+
+<li class="logout" onclick="logout()">Logout</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+<!-- PROFILE CARD -->
+<div class="profile-card">
+
+<img src="/img/user.png" class="avatar">
+
+<div class="profile-info">
+
+<h2 id="user_name">Loading...</h2>
+
+<p>Consumer ID: <span id="consumer_id">Loading...</span></p>
+
+<p class="status">Status: <span id="conn_status">Loading...</span></p>
+
+</div>
+
+</div>
+
+
+
+<!-- CONSUMER PROFILE -->
+<div class="details-card">
+
+<h2>Consumer Profile</h2>
+
+<hr>
+
+<div class="details-grid">
+
+<div>
+
+<p><b>Name:</b> <span id="name">Loading...</span></p>
+
+<p><b>Consumer ID:</b> <span id="cid">Loading...</span></p>
+
+<p><b>Meter Number:</b> <span id="meter">Loading...</span></p>
+
+<p><b>Tariff Type:</b> <span id="tariff">Loading...</span></p>
+
+</div>
+
+<div>
+
+<p><b>Mobile:</b> <span id="mobile">Loading...</span></p>
+
+<p><b>Email:</b> Not Available</p>
+
+<p><b>Address:</b> <span id="address">Loading...</span></p>
+
+<p><b>Status:</b> <span id="status">Loading...</span></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/js/scripts.js"></script>
+<script src="/js/profile.js"></script>
+
+</body>
+</html>

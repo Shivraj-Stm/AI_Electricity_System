@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bill - AI Electricity</title>
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/bill.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+<!-- Sidebar -->
+<div class="sidebar">
+
+<h2>⚡ AI Electricity</h2>
+
+<ul>
+<li><a href="profile.html">Profile</a></li>
+<li><a href="bill.html" class="active">Bill</a></li>
+<li><a href="history.html">History</a></li>
+<li><a href="prediction.html">Prediction</a></li>
+<li><a href="chatbot.html">Chatbot</a></li>
+<li class="logout"><a href="#">Logout</a></li>
+</ul>
+
+</div>
+
+<!-- Main Section -->
+<div class="main">
+
+<h2>Payment Details</h2>
+
+<div class="card-container">
+
+<!-- Last Payment -->
+<div class="card">
+<h3>Last Payment</h3>
+<p>Amount: ₹ <span id="paidAmount"></span></p>
+</div>
+
+<!-- Remaining -->
+<div class="card">
+<h3>Remaining Amount</h3>
+<p>Due Amount: ₹ <span id="remainingAmount"></span></p>
+</div>
+
+<!-- Current Bill -->
+<div class="card">
+<h3>Current Bill</h3>
+<p>Month: <span id="billMonth"></span></p>
+<p>Units: <span id="billUnits"></span></p>
+<p>Total: <span id="billTotal"></span></p>
+</div>
+
+</div> <!-- card-container end -->
+
+<!-- Pay Button -->
+<div style="text-align:center; margin-top:20px;">
+<button id="payBtn">Pay Now</button>
+</div>
+
+<!-- Chart Section -->
+<div class="chart-box">
+
+<h3>Payment Overview</h3>
+
+<div class="charts">
+<canvas id="paymentChart"></canvas>
+</div>
+
+</div>
+
+</div> <!-- main end -->
+</div><!--con-->
+
+<!-- JS FILE -->
+<script src="js/bill.js"></script>
+
+</body>
+</html>

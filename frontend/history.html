@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Bill History</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/history.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <div class="logo">⚡ AI Electricity</div>
+
+  <ul>
+    <li onclick="navigate('profile.html')">Profile</li>
+    <li onclick="navigate('bill.html')">Bill</li>
+    <li onclick="navigate('history.html')">History</li>
+    <li onclick="navigate('prediction.html')">Prediction</li>
+    <li onclick="navigate('chatbot.html')">Chatbot</li>
+
+    <li class="logout" onclick="logout()">Logout</li>
+  </ul>
+
+</div>
+<!-- Main Content -->
+<div class="main">
+
+<h1>Bill History</h1>
+
+<div class="filter">
+
+<label>Select History :</label>
+
+<select id="monthFilter">
+<option value="1">Last Month</option>
+<option value="3" selected>Last 3 Months</option>
+<option value="6">Last 6 Months</option>
+<option value="9">Last 9 Months</option>
+<option value="12">Last 12 Months</option>
+</select>
+
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>Month</th>
+<th>Units</th>
+<th>Bill</th>
+</tr>
+</thead>
+
+<tbody id="historyTable">
+<tr>
+<td colspan="3">Loading...</td>
+</tr>
+</tbody>
+
+</table>
+
+<div class="charts">
+
+<div class="chart-box">
+<canvas id="barChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="unitLineChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="lineChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="pieChart"></canvas>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- JS -->
+ <script src="js/common.js"></script>
+<script src="js/history.js"></script>
+
+<!-- Logout Script -->
+<script>
+function logout() {
+    localStorage.removeItem("acct_id");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
