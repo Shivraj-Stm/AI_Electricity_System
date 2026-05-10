@@ -7,9 +7,20 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 # ================= LOAD MODEL =================
-model = SentenceTransformer(
-    'paraphrase-multilingual-MiniLM-L12-v2'
-)
+model = None
+
+
+def get_model():
+    global model
+
+    if model is None:
+        model = SentenceTransformer(
+            'paraphrase-multilingual-MiniLM-L12-v2'
+        )
+
+        print("Model Loaded Successfully")
+
+    return model
 
 
 # ================= LOAD DATASET =================
@@ -23,7 +34,6 @@ with open(dataset_path, "r", encoding="utf-8") as file:
 
 # ================= PREPARE TRAINING DATA =================
 intent_patterns = {}
-intent_embeddings = {}
 
 for intent in data["intents"]:
 
@@ -33,10 +43,6 @@ for intent in data["intents"]:
 
     intent_patterns[tag] = patterns
 
-    embeddings = model.encode(patterns)
-
-    intent_embeddings[tag] = embeddings
-
 
 # ================= PREDICT INTENT =================
 def predict_intent(user_input):
@@ -44,7 +50,6 @@ def predict_intent(user_input):
     text = user_input.lower()
 
     # ================= PRIORITY RULES =================
-
     history_keywords = [
         "history",
         "itihas",
@@ -66,13 +71,14 @@ def predict_intent(user_input):
             return "bill_history", 0.99
 
     # ================= EMBEDDING PREDICTION =================
-
-    user_embedding = model.encode([user_input])
+    user_embedding = get_model().encode([user_input])
 
     best_intent = None
     best_score = -1
 
-    for tag, embeddings in intent_embeddings.items():
+    for tag, patterns in intent_patterns.items():
+
+        embeddings = get_model().encode(patterns)
 
         similarities = cosine_similarity(
             user_embedding,
