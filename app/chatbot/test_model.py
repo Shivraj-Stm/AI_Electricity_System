@@ -11,6 +11,6 @@ def get_model():
             device='cpu'
         )
 
-    return model
+        print("Model Loaded Successfully")
 
-print("Model Loaded Successfully")
+    return model
