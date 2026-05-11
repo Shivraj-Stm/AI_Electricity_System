@@ -41,7 +41,7 @@ async function loadBill(){
             return;
         }
 
-        const response = await fetch(`http://127.0.0.1:8000/user/bill/${acct_id}`);
+        const response = await fetch(`https://ai-electricity-system.onrender.com`);
 
         if(!response.ok){
             throw new Error("Failed to fetch bill data");

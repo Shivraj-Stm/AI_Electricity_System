@@ -15,7 +15,8 @@ def get_model():
 
     if model is None:
         model = SentenceTransformer(
-            'all-MiniLM-L6-v2'
+            'paraphrase-MiniLM-L3-v2',
+             device='cpu'
         )
 
         print("Model Loaded Successfully")
@@ -34,6 +35,7 @@ with open(dataset_path, "r", encoding="utf-8") as file:
 
 # ================= PREPARE TRAINING DATA =================
 intent_patterns = {}
+intent_embeddings = {}
 
 for intent in data["intents"]:
 
@@ -44,10 +46,29 @@ for intent in data["intents"]:
     intent_patterns[tag] = patterns
 
 
+# ================= PRECOMPUTE EMBEDDINGS =================
+def load_embeddings():
+
+    global intent_embeddings
+
+    if not intent_embeddings:
+
+        model = get_model()
+
+        for tag, patterns in intent_patterns.items():
+
+            intent_embeddings[tag] = model.encode(patterns)
+
+        print("Embeddings Loaded")
+
+
 # ================= PREDICT INTENT =================
 def predict_intent(user_input):
 
     text = user_input.lower()
+
+    # Load embeddings only once
+    load_embeddings()
 
     # ================= PRIORITY RULES =================
     history_keywords = [
@@ -70,15 +91,13 @@ def predict_intent(user_input):
 
             return "bill_history", 0.99
 
-    # ================= EMBEDDING PREDICTION =================
+    # ================= USER EMBEDDING =================
     user_embedding = get_model().encode([user_input])
 
     best_intent = None
     best_score = -1
 
-    for tag, patterns in intent_patterns.items():
-
-        embeddings = get_model().encode(patterns)
+    for tag, embeddings in intent_embeddings.items():
 
         similarities = cosine_similarity(
             user_embedding,

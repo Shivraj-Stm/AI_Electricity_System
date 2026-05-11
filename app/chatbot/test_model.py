@@ -7,7 +7,8 @@ def get_model():
 
     if model is None:
         model = SentenceTransformer(
-            'paraphrase-multilingual-MiniLM-L12-v2'
+            'paraphrase-MiniLM-L3-v2',
+            device='cpu'
         )
 
     return model
